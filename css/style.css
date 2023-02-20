@@ -1,0 +1,90 @@
+/* Regole generali */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #1E1E1E;
+}
+
+/* Container */
+.container {
+    max-width: 900px;
+    margin: 0px auto;
+}
+
+/* Main */
+.main-content {
+    padding-top: 100px;
+}
+
+/* Carosello */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 510px;
+    box-shadow: rgba(205, 211, 215, 0.2) 0px 8px 24px;
+}
+
+/* Slide */
+.slide {
+    width: 100%;
+    height: 100%;
+}
+
+/* Immagine delle slide */
+.slide img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Descrizione */
+.description {
+    color: white;
+    text-align: right;
+    width: 100%;
+    height: 100px;
+    padding: 20px 10px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+
+/* Titolo */
+.title {
+    font-size: 20px;
+}
+
+/* Testo */
+.text {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Bottone */
+.btn {
+    font-size: 52px;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+}
+
+/* Bottone per andare indietro con le immagini */
+.left {
+    top: 50%;
+    left: 10px;
+}
+
+/* Bottone per andare avanti con le immagini */
+.right {
+    top: 50%;
+    right: 10px;
+}
