@@ -1,3 +1,13 @@
+const { createApp } = Vue; //Vue
+//Vue app
+createApp({
+    data() {
+        return {
+            message: 'Hello Vue!'
+        }
+    }
+}).mount('#app');
+
 //Array di immagini
 const images = [
     {
@@ -74,7 +84,7 @@ btnLeft.addEventListener("click", function() {
 });
 
 //Intervallo di tempo
-setInterval(function() {
+/*setInterval(function() {
     //Se l'indice è minore della lunghezza dell'array di immagini
     if (index < (images.length - 1)) {
         console.log("Indice prima dell'incremento: " + index); //stampa dell'indice prima dell'incremento
@@ -91,4 +101,4 @@ setInterval(function() {
         titleElement.innerHTML = images[index].title; //cambio il titolo
         textElement.innerHTML = images[index].text; //cambio il testo
     }
-}, time);
+}, time);*/
