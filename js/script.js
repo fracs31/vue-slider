@@ -1,9 +1,51 @@
 const { createApp } = Vue; //Vue
 //Vue app
 createApp({
+    //Variabili
     data() {
         return {
             message: 'Hello Vue!'
+        }
+    },
+    //Metodi
+    methods: {
+        //Funzione per quando viene premuto il tasto per andare avanti con le immagini del carosello
+        goRight() {
+            //Se l'indice è minore della lunghezza dell'array di immagini
+            if (index < (images.length - 1)) {
+                console.log("Indice prima dell'incremento: " + index); //stampa dell'indice prima dell'incremento
+                index++; //incremento l'indice
+                console.log("Indice dopo l'incremento: " + index); //stampa dell'indice dopo l'incremento
+                imgElement.src = images[index].image; //cambio l'immagine
+                titleElement.innerHTML = images[index].title; //cambio il titolo
+                textElement.innerHTML = images[index].text; //cambio il testo
+            } else if (index == (images.length - 1)) { //altrimenti se l'indice è uguale alla lunghezza dell'array di immagini
+                console.log("Indice prima dell'azzeramento: " + index); //stampa dell'indice prima dell'azzeramento
+                index = 0; //azzero l'indice
+                console.log("Indice dopo l'azzeramento: " + index); //stampa dell'indice dopo dell'azzeramento
+                imgElement.src = images[index].image; //cambio l'immagine
+                titleElement.innerHTML = images[index].title; //cambio il titolo
+                textElement.innerHTML = images[index].text; //cambio il testo
+            }
+        },
+        //Funzione per quando viene premuto il tasto per andare indietro con le immagini del carosello
+        goLeft() {
+            //Se l'indice è maggiore di 0
+            if (index > 0) {
+                console.log("Indice prima del decremento: " + index); //stampa dell'indice prima del decremento
+                index--; //decremento l'indice
+                console.log("Indice dopo il decremento: " + index); //stampa dell'indice dopo il decremento
+                imgElement.src = images[index].image; //cambio l'immagine
+                titleElement.innerHTML = images[index].title; //cambio il titolo
+                textElement.innerHTML = images[index].text; //cambio il testo
+            } else if (index == 0) { //altrimenti se l'indice è uguale a 0
+                console.log("Indice prima di andare nell'ultima posizione: " + index); //stampa dell'indice prima di andare nell'ultima posizione dell'array di immagini
+                index = images.length - 1; //assegno all'indice il valore della lunghezza dell'array di immagini meno 1
+                console.log("Indice dopo essere andato nell'ultima posizione: " + index); //stampa dell'indice dopo essere andato nell'ultima posizione dell'array di immagini
+                imgElement.src = images[index].image; //cambio l'immagine
+                titleElement.innerHTML = images[index].title; //cambio il titolo
+                textElement.innerHTML = images[index].text; //cambio il testo
+            }
         }
     }
 }).mount('#app');
@@ -44,7 +86,7 @@ console.log(images); //stampo l'array con le immagini del carosello
 console.log("Indice di partenza: " + index); //stampa dell'indice di partenza
 
 //Quando viene premuto il tasto per andare avanti con le immagini del carosello
-btnRight.addEventListener("click", function() {
+/*btnRight.addEventListener("click", function() {
     //Se l'indice è minore della lunghezza dell'array di immagini
     if (index < (images.length - 1)) {
         console.log("Indice prima dell'incremento: " + index); //stampa dell'indice prima dell'incremento
@@ -61,10 +103,10 @@ btnRight.addEventListener("click", function() {
         titleElement.innerHTML = images[index].title; //cambio il titolo
         textElement.innerHTML = images[index].text; //cambio il testo
     }
-});
+});*/
 
 //Quando viene premuto il tasto per andare indietro con le immagini del carosello
-btnLeft.addEventListener("click", function() {
+/*btnLeft.addEventListener("click", function() {
     //Se l'indice è maggiore di 0
     if (index > 0) {
         console.log("Indice prima del decremento: " + index); //stampa dell'indice prima del decremento
@@ -81,7 +123,7 @@ btnLeft.addEventListener("click", function() {
         titleElement.innerHTML = images[index].title; //cambio il titolo
         textElement.innerHTML = images[index].text; //cambio il testo
     }
-});
+});*/
 
 //Intervallo di tempo
 /*setInterval(function() {
