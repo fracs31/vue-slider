@@ -21,17 +21,16 @@
                     <!-- Slide -->
                     <div class="slide">
                         <!-- Immagine -->
-                        <img id="img" src="./img/01.webp" alt="image">
+                        <img id="img" v-bind:src="imgSrc" alt="image">
                         <!-- Descrizione -->
                         <div class="description">
                             <!-- Titolo -->
                             <h1 id="title" class="title">
-                                Marvel's Spiderman Miles Morales
+                                {{ title }}
                             </h1>
                             <!-- Testo -->
                             <h2 id="text" class="text">
-                                Experience the rise of Miles Morales as the new hero masters incredible, 
-                                explosive new powers to become his own Spider-Man.
+                                {{ text }}
                             </h2>
                         </div>
                     </div>
