@@ -77,26 +77,4 @@ createApp({
     }
 }).mount('#app');
 
-let time = 3000; //tempo di scorrimento delle immagini
-
 console.log("Indice di partenza: " + this.index); //stampa dell'indice di partenza
-
-//Intervallo di tempo
-/*setInterval(function() {
-    //Se l'indice è minore della lunghezza dell'array di immagini
-    if (index < (images.length - 1)) {
-        console.log("Indice prima dell'incremento: " + index); //stampa dell'indice prima dell'incremento
-        index++; //incremento l'indice
-        console.log("Indice dopo l'incremento: " + index); //stampa dell'indice dopo l'incremento
-        imgElement.src = images[index].image; //cambio l'immagine
-        titleElement.innerHTML = images[index].title; //cambio il titolo
-        textElement.innerHTML = images[index].text; //cambio il testo
-    } else if (index == (images.length - 1)) { //altrimenti se l'indice è uguale alla lunghezza dell'array di immagini
-        console.log("Indice prima dell'azzeramento: " + index); //stampa dell'indice prima dell'azzeramento
-        index = 0; //azzero l'indice
-        console.log("Indice dopo l'azzeramento: " + index); //stampa dell'indice dopo dell'azzeramento
-        imgElement.src = images[index].image; //cambio l'immagine
-        titleElement.innerHTML = images[index].title; //cambio il titolo
-        textElement.innerHTML = images[index].text; //cambio il testo
-    }
-}, time);*/
