@@ -59,7 +59,8 @@ createApp({
                 console.log("Indice dopo essere andato nell'ultima posizione: " + this.index); //stampa dell'indice dopo essere andato nell'ultima posizione dell'array di immagini
             }
         }
+    },
+    mounted() {
+        console.log("Indice di partenza: " + this.index); //stampa dell'indice di partenza
     }
 }).mount('#app');
-
-console.log("Indice di partenza: " + this.index); //stampa dell'indice di partenza
