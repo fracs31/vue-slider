@@ -29,9 +29,6 @@ createApp({
                 }
             ],
             index: 0, //indice 
-            imgSrc: "./img/01.webp", //immagine
-            title: "Marvel's Spiderman Miles Morales", //titolo
-            text: "Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.", //testo
         }
     },
     //Metodi
@@ -43,16 +40,10 @@ createApp({
                 console.log("Indice prima dell'incremento: " + this.index); //stampa dell'indice prima dell'incremento
                 this.index++; //incremento l'indice
                 console.log("Indice dopo l'incremento: " + this.index); //stampa dell'indice dopo l'incremento
-                this.imgSrc = this.images[this.index].image; //cambio l'immagine
-                this.title = this.images[this.index].title; //cambio il titolo
-                this.text = this.images[this.index].text; //cambio il testo
             } else if (this.index == (this.images.length - 1)) { //altrimenti se l'indice è uguale alla lunghezza dell'array di immagini
                 console.log("Indice prima dell'azzeramento: " + this.index); //stampa dell'indice prima dell'azzeramento
                 this.index = 0; //azzero l'indice
                 console.log("Indice dopo l'azzeramento: " + this.index); //stampa dell'indice dopo dell'azzeramento
-                this.imgSrc = this.images[this.index].image; //cambio l'immagine
-                this.title = this.images[this.index].title; //cambio il titolo
-                this.text = this.images[this.index].text; //cambio il testo
             }
         },
         //Funzione per quando viene premuto il tasto per andare indietro con le immagini del carosello
@@ -62,16 +53,10 @@ createApp({
                 console.log("Indice prima del decremento: " + this.index); //stampa dell'indice prima del decremento
                 this.index--; //decremento l'indice
                 console.log("Indice dopo il decremento: " + this.index); //stampa dell'indice dopo il decremento
-                this.imgSrc = this.images[this.index].image; //cambio l'immagine
-                this.title = this.images[this.index].title; //cambio il titolo
-                this.text = this.images[this.index].text; //cambio il testo
             } else if (this.index == 0) { //altrimenti se l'indice è uguale a 0
                 console.log("Indice prima di andare nell'ultima posizione: " + this.index); //stampa dell'indice prima di andare nell'ultima posizione dell'array di immagini
                 this.index = this.images.length - 1; //assegno all'indice il valore della lunghezza dell'array di immagini meno 1
                 console.log("Indice dopo essere andato nell'ultima posizione: " + this.index); //stampa dell'indice dopo essere andato nell'ultima posizione dell'array di immagini
-                this.imgSrc = this.images[this.index].image; //cambio l'immagine
-                this.title = this.images[this.index].title; //cambio il titolo
-                this.text = this.images[this.index].text; //cambio il testo
             }
         }
     }

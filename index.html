@@ -21,16 +21,16 @@
                     <!-- Slide -->
                     <div class="slide">
                         <!-- Immagine -->
-                        <img id="img" v-bind:src="imgSrc" alt="image">
+                        <img id="img" v-bind:src="images[index].image" alt="image">
                         <!-- Descrizione -->
                         <div class="description">
                             <!-- Titolo -->
                             <h1 id="title" class="title">
-                                {{ title }}
+                                {{ images[index].title }}
                             </h1>
                             <!-- Testo -->
                             <h2 id="text" class="text">
-                                {{ text }}
+                                {{ images[index].text }}
                             </h2>
                         </div>
                     </div>
